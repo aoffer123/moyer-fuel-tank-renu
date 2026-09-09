@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --font-head: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-moyer-gold: #d3a126;
+  --color-deep-gold: #a97a16;
+  --color-near-black: #111111;
+  --color-charcoal: #252525;
+  --color-warm-white: #f7f6f2;
+  --color-concrete: #e8e5de;
+  --color-medium-gray: #686868;
+  --color-light-gray: #d4d0c8;
+  --color-white: #ffffff;
+}
+
+html,
+body {
+  background: var(--color-warm-white);
+  color: var(--color-near-black);
+  font-family: var(--font-body);
+}
+
+/* ---------- Brand stripe: echoes the shop's own black-and-gold banding ---------- */
+.brand-stripe {
+  height: 7px;
+  display: flex;
+}
+.brand-stripe span {
+  height: 100%;
+}
+.brand-stripe .b {
+  background: var(--color-near-black);
+  flex: 0 0 68%;
+}
+.brand-stripe .g {
+  background: var(--color-moyer-gold);
+  flex: 1;
+}
+
+/* ---------- Data plate: nav + footer chrome ---------- */
+.data-plate {
+  background: var(--color-near-black);
+  color: var(--color-warm-white);
+}
+
+/* ---------- Nav links: stenciled tabs, not pill buttons ---------- */
+.stencil-link {
+  font-family: var(--font-head);
+  letter-spacing: 0.03em;
+  color: var(--color-light-gray);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+.stencil-link:hover {
+  color: var(--color-white);
+}
+.stencil-link.active {
+  color: var(--color-white);
+  border-bottom-color: var(--color-moyer-gold);
+}
+
+/* ---------- Stamped checklist: trust bullets ---------- */
+.stamp-item {
+  border-top: 1px solid var(--color-light-gray);
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+.stamp-item:last-child {
+  border-bottom: 1px solid var(--color-light-gray);
+}
+.stamp-mark {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: none;
+  border: 2px solid var(--color-moyer-gold);
+  transform: rotate(45deg);
+  margin-top: 0.2rem;
+}
+
+/* ---------- Process step number, for genuine sequences only ---------- */
+.step-num {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  color: var(--color-near-black);
+  background: var(--color-moyer-gold);
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Work-order form controls ---------- */
+.wo-field {
+  background: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  color: var(--color-near-black);
+  padding: 0.6rem 0.75rem;
+  width: 100%;
+  font-family: var(--font-body);
+}
+.wo-field:focus {
+  outline: 2px solid var(--color-moyer-gold);
+  outline-offset: 1px;
+}
+.wo-label {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--color-medium-gray);
+}
+
+/* ---------- Buttons ---------- */
+.btn-solid {
+  font-family: var(--font-head);
+  background: var(--color-near-black);
+  color: var(--color-warm-white);
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  letter-spacing: 0.02em;
+  transition: background 150ms ease;
+}
+.btn-solid:hover {
+  background: var(--color-charcoal);
+}
+.btn-outline {
+  font-family: var(--font-head);
+  background: transparent;
+  color: var(--color-near-black);
+  border: 1.5px solid var(--color-near-black);
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+.btn-gold {
+  font-family: var(--font-head);
+  background: var(--color-moyer-gold);
+  color: var(--color-near-black);
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  letter-spacing: 0.02em;
+  transition: background 150ms ease;
+}
+.btn-gold:hover {
+  background: var(--color-deep-gold);
+}
+
+@media print {
+  .no-print { display: none !important; }
+}
