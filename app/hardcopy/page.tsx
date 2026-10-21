@@ -21,17 +21,26 @@ const terms = [
 
 export default function Hardcopy() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
+    <main className="mx-auto max-w-5xl px-6 py-16">
       <div className="no-print">
-        <p className="font-head text-sm tracking-wide" style={{ color: "var(--color-deep-gold)" }}>
+        <p
+          className="font-head text-sm tracking-wide"
+          style={{ color: "var(--color-deep-gold)" }}
+        >
           Intake form
         </p>
-        <h1 className="font-head text-4xl mt-3" style={{ color: "var(--color-near-black)" }}>
+        <h1
+          className="font-head text-4xl mt-3"
+          style={{ color: "var(--color-near-black)" }}
+        >
           Print it, fill it out, send it with your tank
         </h1>
-        <p className="mt-4 text-sm max-w-xl" style={{ color: "var(--color-medium-gray)" }}>
-          This is the same form that ships with every tank we receive. Fill
-          it out on screen or print a copy, sign it, and pack it in the box.
+        <p
+          className="mt-4 text-sm max-w-xl"
+          style={{ color: "var(--color-medium-gray)" }}
+        >
+          This is the same form that ships with every tank we receive. Fill it
+          out on screen or print a copy, sign it, and pack it in the box.
         </p>
         <PrintButton />
       </div>
@@ -53,28 +62,43 @@ export default function Hardcopy() {
       </div>
 
       <div>
-        <h2 className="font-head text-xl" style={{ color: "var(--color-near-black)" }}>
+        <h2
+          className="font-head text-xl"
+          style={{ color: "var(--color-near-black)" }}
+        >
           Before you sign
         </h2>
         <ul className="mt-4 space-y-3">
           {terms.map((term, i) => (
             <li key={i} className="stamp-item flex items-start gap-3">
               <span className="stamp-mark" />
-              <span className="text-sm" style={{ color: "var(--color-charcoal)" }}>
+              <span
+                className="text-sm"
+                style={{ color: "var(--color-charcoal)" }}
+              >
                 {term}
               </span>
             </li>
           ))}
         </ul>
 
-        <label className="mt-6 flex items-start gap-3 text-sm" style={{ color: "var(--color-near-black)" }}>
+        <label
+          className="mt-6 flex items-start gap-3 text-sm"
+          style={{ color: "var(--color-near-black)" }}
+        >
           <input type="checkbox" className="mt-1" />
           <span>I have read and accept the above.</span>
         </label>
 
         <div className="mt-8 max-w-sm">
           <p className="wo-label">Signature</p>
-          <div className="mt-2 border-b" style={{ borderColor: "var(--color-light-gray)", height: "2.25rem" }} />
+          <div
+            className="mt-2 border-b"
+            style={{
+              borderColor: "var(--color-light-gray)",
+              height: "2.25rem",
+            }}
+          />
         </div>
       </div>
     </main>

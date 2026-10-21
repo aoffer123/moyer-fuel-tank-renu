@@ -4,86 +4,73 @@ import { ProcessStrip } from "./components/process-strip";
 import { ServiceExplorer } from "./components/service-explorer";
 import { WhyChooseMoyer } from "./components/why-choose-moyer";
 import { TestimonialCarousel } from "./components/testimonial-carousel";
-
+import { ArrowRightIcon } from "@phosphor-icons/react/ssr";
+import { ShopImage } from "./components/shop-image";
 
 export default function Home() {
   return (
     <main>
       {/* Hero */}
       <section style={{ background: "var(--color-moyer-gold)" }}>
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="mx-auto max-w-screen-2xl px-8  py-14 sm:py-20">
+          <div className="grid gap-12 lg:gap-20 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div>
-              <p className="font-head text-sm font-bold uppercase tracking-[0.16em]" style={{ color: "var(--color-near-black)" }}>
+              <p
+                className="font-head text-xs sm:text-sm font-bold uppercase tracking-[0.16em]"
+                style={{ color: "var(--color-near-black)" }}
+              >
                 Family-run since 1942
               </p>
 
-              <div className="mt-4 h-1 w-16 bg-near-black" />
-              <p className="font-base text-base mt-4 tracking-wide" style={{ color: "var(--color-near-black)" }}>
+              <div className="mt-5 sm:mt-4 h-1 w-12 sm:w-16 bg-near-black" />
+              <p
+                className="font-base text-sm sm:text-base mt-5 sm:mt-4 tracking-wide"
+                style={{ color: "var(--color-near-black)" }}
+              >
                 Patented no-rust process — no tank too old
               </p>
-              <h1 className="font-head text-4xl sm:text-5xl mt-3 max-w-2xl leading-tight" style={{ color: "var(--color-near-black)" }}>
+              <h1
+                className="font-head text-3xl sm:text-5xl mt-5 sm:mt-3 max-w-2xl leading-tight"
+                style={{ color: "var(--color-near-black)" }}
+              >
                 We don&apos;t lock in rust. We remove it completely.
               </h1>
-              <p className="mt-5 max-w-xl text-base" style={{ color: "var(--color-charcoal)" }}>
-                Moyer Fuel Tank Renu has spent generations repairing and restoring gasoline and diesel fuel tanks. From antique cars and motorcycles to trucks, tractors, boats, and specialty applications, we help preserve original tanks that can be difficult — or impossible — to replace.
+              {/* Mobile Shop Image */}
+              <div className="mt-8 mb-16 lg:hidden">
+                <ShopImage />
+              </div>
+              <p
+                className="mt-5 text-sm sm:text-base leading-6"
+                style={{ color: "var(--color-charcoal)" }}
+              >
+                Moyer Fuel Tank Renu has spent generations repairing and
+                restoring gasoline and diesel fuel tanks. From antique cars and
+                motorcycles to trucks, tractors, boats, and specialty
+                applications, we help preserve original tanks that can be
+                difficult — or impossible — to replace.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a href="tel:18003289550" className="btn-solid">
-                  Call 1-800-328-9550
-                </a>
-                <Link href="/hardcopy" className="btn-outline">
-                  Get the intake form
+              <div className="mt-9 sm:mt-9 flex w-full gap-3 sm:gap-4">
+                <Link href="/our-work" className="btn-solid min-w-0 flex-1">
+                  View Our Work
+                  <ArrowRightIcon size={16} weight="bold" />
+                </Link>
+
+                <Link
+                  href="/how-it-works"
+                  className="btn-outline min-w-0 flex-1"
+                >
+                  How It Works
+                  <ArrowRightIcon size={16} weight="bold" />
                 </Link>
               </div>
             </div>
-            {/* Shop image */}
-            <div className="relative">
-              <div
-                className="relative overflow-hidden"
-                style={{
-                  clipPath:
-                    "polygon(5% 0, 100% 0, 100% 88%, 94% 100%, 0 100%, 0 12%)",
-                }}
-              >
-                <Image
-                  src="/images/shop-building.jpg"
-                  alt="Moyer Fuel Tank Renu shop in Greensburg, Pennsylvania"
-                  width={1057}
-                  height={294}
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-
-              {/* Experience badge */}
-              <div
-                className="
-                  absolute -bottom-4 right-4
-                  flex h-20 w-24
-                  items-center justify-center
-                  bg-near-black px-3 text-center
-                  shadow-xl
-                  sm:h-24 sm:w-28
-                "
-                style={{
-                  clipPath:
-                    "polygon(15% 0, 100% 0, 100% 82%, 85% 100%, 0 100%, 0 18%)",
-                }}
-              >
-                <div>
-                  <p className="font-head text-2xl font-bold leading-none text-moyer-gold sm:text-3xl">
-                    80+
-                  </p>
-                  <p className="mt-1.5 font-head text-[10px] font-bold uppercase tracking-wide text-white sm:text-xs">
-                    Years experience
-                  </p>
-                </div>
-              </div>
+            {/* Desktop Shop Image - RIGHT COLUMN */}
+            <div className="hidden lg:block">
+              <ShopImage />
             </div>
           </div>
         </div>
       </section>
-
 
       {/* <section className="bg-warm-white">
         <div className="mx-auto max-w-6xl px-6 py-16">
@@ -184,7 +171,10 @@ export default function Home() {
       {/* What we work on */}
       <section className="bg-concrete">
         <div className="mx-auto max-w-5xl px-6 py-16">
-          <h2 className="font-head text-4xl" style={{ color: "var(--color-near-black)" }}>
+          <h2
+            className="font-head text-4xl"
+            style={{ color: "var(--color-near-black)" }}
+          >
             What we work on
           </h2>
           {/* <p className="mt-2 text-sm max-w-lg" style={{ color: "var(--color-medium-gray)" }}>
@@ -214,10 +204,10 @@ export default function Home() {
       </section> */}
 
       {/* Location */}
-      <section className="bg-moyer-gold">
+      {/* Location */}
+      <section id="visit-moyer" className="bg-moyer-gold scroll-mt-24">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
-
             {/* Location info */}
             <div>
               <p className="font-head text-sm font-bold uppercase tracking-[0.16em] text-near-black">
@@ -229,13 +219,16 @@ export default function Home() {
               </h2>
 
               <p className="mt-5 max-w-md text-sm leading-6 text-near-black">
-                Local customers can bring their tanks directly to the shop.
-                Not nearby? Tanks can be shipped to Moyer from anywhere in the country.
+                Local customers can bring their tanks directly to the shop. Not
+                nearby? Tanks can be shipped to Moyer from anywhere in the
+                country.
               </p>
 
               <div className="mt-7 space-y-2 text-sm text-near-black">
                 <p>
-                  <strong className="text-near-black">Moyer Fuel Tank Renu</strong>
+                  <strong className="text-near-black">
+                    Moyer Fuel Tank Renu
+                  </strong>
                 </p>
 
                 <p>
@@ -277,7 +270,6 @@ export default function Home() {
                 className="block w-full"
               />
             </div>
-
           </div>
         </div>
       </section>
@@ -285,10 +277,16 @@ export default function Home() {
       {/* Testimonials */}
       <section className="bg-warm-white">
         <div className="mx-auto max-w-3xl px-6 py-16">
-          <h2 className="font-head text-2xl" style={{ color: "var(--color-near-black)" }}>
+          <h2
+            className="font-head text-2xl"
+            style={{ color: "var(--color-near-black)" }}
+          >
             What customers say
           </h2>
-          <p className="mt-2 text-sm max-w-lg" style={{ color: "var(--color-medium-gray)" }}>
+          <p
+            className="mt-2 text-sm max-w-lg"
+            style={{ color: "var(--color-medium-gray)" }}
+          >
             Real reviews from Google, Yelp, the AACA forums, and a few sent
             straight to us.
           </p>

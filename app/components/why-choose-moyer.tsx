@@ -32,9 +32,8 @@ const additionalReasons = [
 
 export function WhyChooseMoyer() {
   return (
-    <section className="overflow-hidden bg-warm-white py-16">
+    <section className="overflow-hidden bg-warm-white py-10 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,20 +42,19 @@ export function WhyChooseMoyer() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-2xl text-center"
         >
-          
-          <h2 className="font-head text-4xl leading-none text-near-black">
-            Why choose Us?
+          <h2 className="font-head text-3xl sm:text-4xl leading-tight sm:leading-none text-near-black">
+            Why Choose Us?
           </h2>
 
-          <p className="mx-auto font-body mt-4 max-w-xl text-base text-medium-gray">
+          <p className="mx-auto mt-4 max-w-sm sm:max-w-xl font-body text-sm sm:text-base leading-relaxed text-medium-gray">
             Fuel tank restoration has been our specialty for generations.
-            Experience, proven restoration, and nationwide service all in one place.
+            Experience, proven restoration, and nationwide service all in one
+            place.
           </p>
         </motion.div>
 
         {/* Cards */}
-        <div className="mt-8 grid gap-6 md:grid-cols-3 md:items-start">
-
+        <div className="mt-6 sm:mt-8 grid grid-cols-1 justify-items-center gap-5 sm:gap-6 md:grid-cols-3 md:items-start">
           {reasons.map((reason, index) => (
             <motion.article
               key={reason.stat}
@@ -69,13 +67,15 @@ export function WhyChooseMoyer() {
               }}
               whileHover={{ y: -10 }}
               className={`
-                group relative flex min-h-[360px] overflow-hidden
-                rounded-3xl border border-light-gray bg-concrete
-                px-7 py-10 text-center
-                transition-shadow duration-300
-                hover:shadow-xl
-                ${index === 1 ? "md:mt-16" : ""}
-              `}
+              group relative flex w-full max-w-[340px] md:max-w-none
+              min-h-[260px] md:min-h-[360px]
+              overflow-hidden rounded-2xl sm:rounded-3xl
+              border border-light-gray bg-concrete
+              px-5 py-6 sm:px-7 sm:py-10
+              text-center transition-shadow duration-300
+              hover:shadow-xl
+              ${index === 1 ? "md:mt-16" : ""}
+            `}
             >
               {/* Decorative background circles */}
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -99,33 +99,32 @@ export function WhyChooseMoyer() {
 
               {/* Content */}
               <div className="relative z-10 m-auto">
-
                 {/* Small badge */}
                 <div
                   className="
-                    mx-auto mb-6 flex h-12 w-12 items-center justify-center
-                    rounded-full bg-near-black
-                    transition-transform duration-300
-                    group-hover:rotate-6 group-hover:scale-110
-                  "
+                  mx-auto mb-4 sm:mb-6 flex h-10 w-10 sm:h-12 sm:w-12
+                  items-center justify-center rounded-full bg-near-black
+                  transition-transform duration-300
+                  group-hover:rotate-6 group-hover:scale-110
+                "
                 >
                   <div className="h-3 w-3 rotate-45 border-2 border-moyer-gold" />
                 </div>
 
                 <p
                   className="
-                    font-head text-4xl font-extrabold leading-none
+                    font-head text-xl sm:text-4xl font-extrabold leading-none
                     text-near-black
                   "
                 >
                   {reason.stat}
                 </p>
 
-                <h3 className="mt-5 font-head text-2xl font-bold text-near-black">
+                <h3 className="mt-3 sm:mt-5 font-head text-[20px] sm:text-2xl font-bold text-near-black">
                   {reason.title}
                 </h3>
 
-                <p className="mx-auto mt-3 max-w-xs text-sm leading-6 text-medium-gray">
+                <p className="mx-auto mt-3 max-w-[270px] sm:max-w-xs font-body text-[13px] sm:text-sm leading-[1.6] text-medium-gray">
                   {reason.description}
                 </p>
               </div>
@@ -141,7 +140,6 @@ export function WhyChooseMoyer() {
               />
             </motion.article>
           ))}
-
         </div>
 
         {/* Additional reasons */}
@@ -227,7 +225,6 @@ export function WhyChooseMoyer() {
             </a>
           </div>
         </motion.div> */}
-
       </div>
     </section>
   );

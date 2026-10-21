@@ -1,10 +1,6 @@
 export function SiteFooter() {
   return (
     <footer className="no-print">
-      <div className="brand-stripe">
-        <span className="g" style={{ flex: "0 0 68%" }} />
-        <span className="b" style={{ flex: 1 }} />
-      </div>
       <div className="data-plate">
         <div className="mx-auto max-w-6xl px-6 py-10 grid gap-12 sm:grid-cols-2 text-sm" style={{ color: "var(--color-light-gray)" }}>
           <div>
