@@ -8,6 +8,10 @@ import {
   ArrowRightIcon,
   ListIcon,
   XIcon,
+  MapTrifoldIcon,
+  MapPinAreaIcon,
+  NavigationArrowIcon,
+  MapPinSimpleAreaIcon,
 } from "@phosphor-icons/react";
 
 const navItems = [
@@ -31,7 +35,7 @@ export function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="no-print">
+    <header className="no-print sticky top-0 z-50 lg:static">
       <div className="data-plate">
         <div className="px-6 lg:px-12 py-4 flex items-center justify-between gap-4">
           {/* Logo */}
@@ -80,7 +84,6 @@ export function SiteHeader() {
             <Link href="/#visit-moyer" className="btn-header text-sm">
               <MapPinIcon size={18} weight="bold" />
               Visit Our Shop
-              <ArrowRightIcon size={16} weight="bold" />
             </Link>
           </div>
 
@@ -140,7 +143,6 @@ export function SiteHeader() {
               >
                 <MapPinIcon size={18} weight="bold" />
                 Visit Our Shop
-                <ArrowRightIcon size={16} weight="bold" />
               </Link>
             </div>
           </nav>

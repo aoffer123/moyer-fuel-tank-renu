@@ -242,15 +242,15 @@ const faqGroups = [
 
 export default function Answers() {
   return (
-    <main className="mx-auto max-w-screen-2xl px-8 py-10 sm:px-6 sm:py-10">
+    <main className="mx-auto max-w-screen-2xl px-8 pt-6 pb-12 sm:px-6 sm:pt-10 sm:pb-20">
       <h1
-        className="mt-3 font-head text-3xl sm:text-4xl"
+        className="mt-3 font-head text-4xl"
         style={{ color: "var(--color-near-black)" }}
       >
         Frequently Asked Questions
       </h1>
-      <p className="mt-4 text-sm" style={{ color: "var(--color-medium-gray)" }}>
-        Find answers about restoring your tank, shipping, pricing, and more.
+      <p className="mt-2 font-body text-sm text-medium-gray">
+        Select a question below to learn more.
       </p>
       <FAQTabs groups={faqGroups} />
       <div

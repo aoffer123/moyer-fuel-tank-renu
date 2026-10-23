@@ -29,10 +29,10 @@ export function FAQTabs({ groups }: { groups: FAQGroup[] }) {
   }
 
   return (
-    <div className="mt-8 grid gap-6 sm:mt-12 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-16">
+    <div className="mt-4 grid gap-6 sm:mt-8 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-16">
       {/* CATEGORIES: swipeable chip row on mobile, sidebar on desktop */}
       <aside className="min-w-0">
-        <p className="mb-2 text-sm font-semibold text-near-black">Categories</p>
+        <h2 className="mb-4 font-head text-xl text-near-black">Categories</h2>
 
         <nav
           aria-label="FAQ categories"
@@ -61,8 +61,8 @@ export function FAQTabs({ groups }: { groups: FAQGroup[] }) {
 
                   ${
                     isActive
-                      ? "border-moyer-gold bg-moyer-gold font-semibold text-near-black lg:bg-concrete"
-                      : "border-light-gray bg-white text-medium-gray hover:text-near-black lg:border-transparent lg:bg-transparent lg:hover:bg-concrete/50"
+                      ? "border-moyer-gold bg-moyer-gold font-semibold text-near-black lg:bg-[#E8E5DE] lg:text-near-black"
+                      : "border-light-gray bg-white text-medium-gray hover:text-near-black hover:border-moyer-gold/50 lg:border-transparent lg:bg-transparent lg:hover:bg-[#E8E5DE]/50"
                   }
                 `}
               >
@@ -75,7 +75,7 @@ export function FAQTabs({ groups }: { groups: FAQGroup[] }) {
 
       {/* QUESTIONS FOR THE ACTIVE CATEGORY */}
       <div key={activeTab} className="min-w-0">
-        <h2 className="font-head text-2xl font-bold text-near-black sm:text-3xl">
+        <h2 className="font-head text-2xl font-semibold text-near-black sm:text-3xl">
           {activeGroup.title}
         </h2>
 
@@ -83,50 +83,54 @@ export function FAQTabs({ groups }: { groups: FAQGroup[] }) {
           Tap a question to see the answer.
         </p>
 
-        <div className="mt-5 space-y-3 sm:mt-8">
+        <div className="mt-6 space-y-2.5">
           {activeGroup.questions.map((question) => (
             <details
               key={question.q}
               className="
-                group overflow-hidden
-                rounded-lg border border-light-gray
-                bg-white
-                open:border-moyer-gold
-                open:shadow-sm
-              "
+              group overflow-hidden rounded-lg
+              border border-light-gray bg-white
+              transition-all duration-200
+              hover:border-[#C8BC9F]
+              open:border-moyer-gold
+              open:shadow-sm
+            "
             >
               <summary
                 className="
-                  flex min-h-14 cursor-pointer list-none
-                  items-center justify-between gap-3
-                  px-4 py-4 sm:gap-4 sm:px-5 sm:py-5
-                  font-head text-lg leading-snug text-near-black sm:text-xl
-                  [&::-webkit-details-marker]:hidden
-                "
+                flex min-h-14 cursor-pointer list-none
+                items-center justify-between gap-4
+                px-5 py-4
+                font-head text-base leading-relaxed tracking-[0.03em] text-near-black
+                transition-colors
+                hover:bg-[#FFFCF6]
+                group-open:bg-[#FFF9ED]
+                [&::-webkit-details-marker]:hidden
+              "
               >
                 <span>{question.q}</span>
 
-                {/* Plus turns into an X when open */}
                 <span
                   aria-hidden="true"
                   className="
-                    flex h-8 w-8 shrink-0
-                    items-center justify-center
-                    rounded-full bg-moyer-gold
-                    text-lg font-bold text-near-black
-                    transition-transform duration-200
-                    group-open:rotate-45
-                  "
+                  flex h-7 w-7 shrink-0
+                  items-center justify-center
+                  rounded-full bg-[#FFF9ED]
+                  text-lg font-medium text-deep-gold
+                  transition-transform duration-200
+                  group-open:rotate-45
+                  group-open:bg-white
+                "
                 >
                   +
                 </span>
               </summary>
 
-              <div className="space-y-3 px-4 pb-5 sm:px-5 sm:pb-6">
+              <div className="space-y-3 border-t border-[#E8E5DE] bg-[#FFFCF6] p-4">
                 {question.a.map((paragraph, index) => (
                   <p
                     key={index}
-                    className="font-body text-[0.95rem] leading-7 text-medium-gray sm:text-sm"
+                    className="font-body text-sm leading-7 text-near-black"
                   >
                     {paragraph}
                   </p>

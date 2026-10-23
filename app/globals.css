@@ -122,8 +122,10 @@ body {
   background: var(--color-white);
   border: 1px solid var(--color-light-gray);
   color: var(--color-near-black);
-  padding: 0.6rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   width: 100%;
+  font-size: 0.8125rem;
+  border-radius: 10px;
   font-family: var(--font-body);
 }
 .wo-field:focus {
@@ -131,10 +133,12 @@ body {
   outline-offset: 1px;
 }
 .wo-label {
-  font-family: var(--font-head);
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
-  color: var(--color-medium-gray);
+  font-family: var(--font-body);
+  font-size: 0.8125rem; /* 13px */
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--color-near-black);
+  margin-left: 4px;
 }
 
 /* ---------- Buttons ---------- */
@@ -142,7 +146,7 @@ body {
 /* Solid Button */
 .btn-solid {
   font-family: var(--font-head);
-  font-size: 0.875rem;
+  font-size: 1rem;
   background: var(--color-near-black);
   color: var(--color-warm-white);
   padding: 0.625rem 1.25rem;
@@ -163,7 +167,7 @@ body {
 /* Outline Button */
 .btn-outline {
   font-family: var(--font-head);
-  font-size: 0.875rem;
+  font-size: 1rem;
   background: transparent;
   color: var(--color-near-black);
   border: 1.5px solid var(--color-near-black);
@@ -188,11 +192,15 @@ body {
 /* Gold Button */
 .btn-gold {
   font-family: var(--font-head);
-  font-size: 0.875rem; /* 14px */
+  font-size: 1rem; /* 18px */
   background: var(--color-moyer-gold);
   color: var(--color-near-black);
   padding: 0.625rem 1.25rem;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 6px;
   letter-spacing: 0.02em;
   transition: background 150ms ease;
 }
@@ -201,18 +209,37 @@ body {
   background: var(--color-deep-gold);
 }
 
+.btn-submit {
+  font-family: var(--font-head);
+  font-size: 0.875rem; /* 14px */
+  background: var(--color-near-black);
+  color: var(--color-white);
+  padding: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 30px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.btn-submit:hover {
+  background: var(--color-charcoal);
+}
+
 /* Header Button */
 .btn-header {
   font-family: var(--font-head);
   font-size: 0.875rem; /* 14px */
   background: #383838;
   color: var(--color-white);
-  padding: 0.625rem 1.25rem;
+  padding: 0.5rem 0.875rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  border-radius: 8px;
-  letter-spacing: 0.02em;
+  gap: 4px;
+  border-radius: 3px;
   transition: background 150ms ease;
 }
 
@@ -221,15 +248,6 @@ body {
 }
 
 /* ---------- Desktop Button Sizing ---------- */
-@media (min-width: 640px) {
-  .btn-solid,
-  .btn-outline,
-  .btn-gold,
-  .btn-header {
-    font-size: 1rem; /* 16px */
-    padding: 0.75rem 1.5rem;
-  }
-}
 
 @media print {
   .no-print {
