@@ -32,7 +32,7 @@ const additionalReasons = [
 
 export function WhyChooseMoyer() {
   return (
-    <section className="overflow-hidden bg-warm-white py-10 sm:py-16">
+    <section className="overflow-hidden bg-warm-white py-10 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Heading */}
         <motion.div

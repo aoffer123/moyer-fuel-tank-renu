@@ -11,13 +11,14 @@ import {
   PhoneIcon,
 } from "@phosphor-icons/react/ssr";
 import { ShopImage } from "./components/shop-image";
+import { WhatWeWorkOn } from "./components/what-we-work-on";
 
 export default function Home() {
   return (
     <main>
       {/* Hero */}
       <section style={{ background: "var(--color-moyer-gold)" }}>
-        <div className="mx-auto max-w-screen-2xl px-8  py-14 sm:py-20">
+        <div className="mx-auto max-w-screen-2xl px-8  py-14 sm:py-24">
           <div className="grid gap-12 lg:gap-20 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div>
               <p
@@ -27,15 +28,15 @@ export default function Home() {
                 Family-run since 1942
               </p>
 
-              <div className="mt-5 sm:mt-4 h-1 w-12 sm:w-16 bg-near-black" />
+              <div className="mt-5 sm:mt-6 h-1 w-12 sm:w-16 bg-near-black" />
               <p
-                className="font-base text-sm sm:text-base mt-5 sm:mt-4 tracking-wide"
+                className="font-base text-sm sm:text-base mt-5 sm:mt-6 tracking-wide"
                 style={{ color: "var(--color-near-black)" }}
               >
                 Patented no-rust process — no tank too old
               </p>
               <h1
-                className="font-head text-3xl sm:text-5xl mt-5 sm:mt-3 max-w-2xl leading-tight"
+                className="font-head text-3xl sm:text-5xl mt-5 sm:mt-6 max-w-2xl leading-tight"
                 style={{ color: "var(--color-near-black)" }}
               >
                 We don&apos;t lock in rust. We remove it completely.
@@ -45,7 +46,7 @@ export default function Home() {
                 <ShopImage />
               </div>
               <p
-                className="mt-5 text-sm sm:text-base leading-6"
+                className="mt-5 sm:mt-6 text-sm sm:text-base leading-6"
                 style={{ color: "var(--color-charcoal)" }}
               >
                 Moyer Fuel Tank Renu has spent generations repairing and
@@ -54,7 +55,7 @@ export default function Home() {
                 applications, we help preserve original tanks that can be
                 difficult — or impossible — to replace.
               </p>
-              <div className="mt-9 sm:mt-9 flex w-full gap-3 sm:gap-4">
+              <div className="mt-9 sm:mt-10 flex w-full gap-3 sm:gap-4">
                 <Link href="/our-work" className="btn-solid min-w-0 flex-1">
                   View Our Work
                   <ArrowRightIcon size={16} weight="bold" />
@@ -77,138 +78,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="bg-warm-white">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-
-  
-            <div>
-              <p className="font-head text-sm font-bold uppercase tracking-[0.16em] text-moyer-gold">
-                Family-run since 1942
-              </p>
-
-              <div className="mt-4 h-1 w-16 bg-moyer-gold" />
-
-              <h2 className="mt-6 font-head text-4xl font-bold leading-[0.95] text-near-black sm:text-5xl lg:text-6xl">
-                Restoring the tanks others give up on.
-              </h2>
-
-              <p className="mt-6 max-w-xl text-base leading-7 text-medium-gray">
-                Moyer Fuel Tank Renu has spent generations repairing and restoring
-                gasoline and diesel fuel tanks. From antique cars and motorcycles to
-                trucks, tractors, boats, and specialty applications, we help preserve
-                original tanks that can be difficult — or impossible — to replace.
-              </p>
-
-              <div className="mt-8 space-y-4">
-                {[
-                  "Family service since 1942",
-                  "Preserve hard-to-find original tanks",
-                  "Nationwide lifetime warranty",
-                  "Ship your tank from anywhere",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center bg-moyer-gold font-head font-bold text-near-black">
-                      ✓
-                    </span>
-                    <span className="text-sm font-medium text-charcoal">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <Link href="/answers" className="btn-solid mt-9 inline-block">
-                See How It Works
-              </Link>
-            </div>
-
-
-            <div className="relative">
-              <div
-                className="relative overflow-hidden"
-                style={{
-                  clipPath:
-                    "polygon(5% 0, 100% 0, 100% 88%, 94% 100%, 0 100%, 0 12%)",
-                }}
-              >
-                <Image
-                  src="/images/shop-building.jpg"
-                  alt="Moyer Fuel Tank Renu shop in Greensburg, Pennsylvania"
-                  width={1057}
-                  height={294}
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-
-
-              <div
-                className="
-                  absolute -bottom-4 right-4
-                  flex h-20 w-24
-                  items-center justify-center
-                  bg-near-black px-3 text-center
-                  shadow-xl
-                  sm:h-24 sm:w-28
-                "
-                style={{
-                  clipPath:
-                    "polygon(15% 0, 100% 0, 100% 82%, 85% 100%, 0 100%, 0 18%)",
-                }}
-              >
-                <div>
-                  <p className="font-head text-2xl font-bold leading-none text-moyer-gold sm:text-3xl">
-                    80+
-                  </p>
-                  <p className="mt-1.5 font-head text-[10px] font-bold uppercase tracking-wide text-white sm:text-xs">
-                    Years experience
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Why choose Moyer */}
       <WhyChooseMoyer />
 
-      {/* What we work on */}
-      <section className="bg-concrete">
-        <div className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-          <h2
-            className="font-head text-4xl"
-            style={{ color: "var(--color-near-black)" }}
-          >
-            What we work on
-          </h2>
-          {/* <p className="mt-2 text-sm max-w-lg" style={{ color: "var(--color-medium-gray)" }}>
-            Every category gets the same Renu process. Pick one to see what&apos;s
-            different about it.
-          </p> */}
-          <div className="mt-8">
-            <ServiceExplorer />
-          </div>
+      <WhatWeWorkOn />
+
+      {/* Testimonials */}
+      <section className="bg-[#FFF9ED]">
+        <div className="mx-auto max-w-7xl px-8 py-16 sm:px-6 sm:py-24">
+          <TestimonialCarousel />
         </div>
       </section>
-
-      {/* Our process
-      <section style={{ background: "var(--color-moyer-gold)" }}>
-        <div className="mx-auto max-w-5xl px-6 py-16">
-          <h2 className="font-head text-2xl" style={{ color: "var(--color-near-black)" }}>
-            Our process
-          </h2>
-          <p className="mt-2 text-sm max-w-lg" style={{ color: "var(--color-charcoal)" }}>
-            The same four steps, whether it&apos;s a tractor tank from the
-            1930s or last year&apos;s daily driver.
-          </p>
-          <div className="mt-10">
-            <ProcessStrip />
-          </div>
-        </div>
-      </section> */}
-
-      {/* Location */}
       {/* Location */}
       <section id="visit-moyer" className="bg-moyer-gold scroll-mt-24">
         <div className="mx-auto max-w-6xl px-6 py-12 sm:py-16">
@@ -288,28 +168,6 @@ export default function Home() {
                 title="Moyer Fuel Tank Renu location"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="bg-warm-white">
-        <div className="mx-auto max-w-3xl px-6 py-16">
-          <h2
-            className="font-head text-2xl"
-            style={{ color: "var(--color-near-black)" }}
-          >
-            What customers say
-          </h2>
-          <p
-            className="mt-2 text-sm max-w-lg"
-            style={{ color: "var(--color-medium-gray)" }}
-          >
-            Real reviews from Google, Yelp, the AACA forums, and a few sent
-            straight to us.
-          </p>
-          <div className="mt-8">
-            <TestimonialCarousel />
           </div>
         </div>
       </section>
